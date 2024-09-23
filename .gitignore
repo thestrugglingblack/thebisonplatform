@@ -3,3 +3,4 @@ infra/.venv/
 .idea/misc.xml
 .idea/thebisonplatform.iml
 .venv
+proxy/shinyproxy-3.1.1.jar
