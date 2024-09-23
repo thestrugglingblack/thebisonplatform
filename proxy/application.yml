@@ -1,0 +1,13 @@
+proxy:
+  title: The Bison Platform
+  logo-url: https://www.sportslogos.net/logos/view/70156582015/Howard_Bison/2015/Secondary_Logo
+  landing-page: /
+  heartbeat-rate: 10000
+  heartbeat-timeout: 60000
+  port: 8080
+  authentication: none
+  docker:
+    internal-networking: true
+logging:
+  file:
+    shinyproxy.log

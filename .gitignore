@@ -1,1 +1,5 @@
 infra/.venv/
+.env
+.idea/misc.xml
+.idea/thebisonplatform.iml
+.venv
