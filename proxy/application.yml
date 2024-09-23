@@ -1,11 +1,23 @@
 proxy:
   title: The Bison Platform
-  logo-url: https://www.sportslogos.net/logos/view/70156582015/Howard_Bison/2015/Secondary_Logo
+  logo-url: https://content.sportslogos.net/logos/31/701/full/howard_bison_logo_secondary_20154240.png
   landing-page: /
   heartbeat-rate: 10000
   heartbeat-timeout: 60000
   port: 8080
-  authentication: none
+  proxy:
+    authentication: openid
+    openid:
+
+  server:
+    useForwardHeaders: true # this is very important to make the AWS Cognito auth works
+    specs:
+      - id: 01_hello
+        display-name: Hello Application
+        description: Application which demonstrates the basics of a Shiny app
+        container-cmd: [ "R", "-e", "shinyproxy::run_01_hello()" ]
+        container-image: openanalytics/shinyproxy-demo
+        access-groups: [ admins, users ]
   docker:
     internal-networking: true
 logging:
